@@ -1,3 +1,7 @@
 !pip install pywhatkit
 import pywhatkit as pwt
-pwt.sendwhatmsg("+916304360377","Welcome This Message Was Sent Using Python",16,53)
+pwt.sendwhatmsg("Your Mobile Number","Your message ",time in hours,time in minutes)
+
+fro example:
+import pywhatkit as pwt
+pwt.sendwhatmsg("+919999999999","Welcome This Message Was Sent Using Python",16,53)
