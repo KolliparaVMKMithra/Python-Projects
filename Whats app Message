@@ -1,0 +1,3 @@
+!pip install pywhatkit
+import pywhatkit as pwt
+pwt.sendwhatmsg("+916304360377","Welcome This Message Was Sent Using Python",16,53)
