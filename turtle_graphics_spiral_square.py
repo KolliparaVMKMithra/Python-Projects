@@ -2,7 +2,6 @@ import turtle as t
 
 pen = t.Turtle()
 pen.color("red")
-pen.bgcolor('black')
 pen.speed(-10)
 pen.pensize(2)
 
