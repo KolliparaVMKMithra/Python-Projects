@@ -1,0 +1,515 @@
+/* Body & Background Design */
+/* body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+} */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow-y: auto; /* Enable vertical scrolling */
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb); /* Same gradient for entire page */
+  background-attachment: fixed;
+}
+
+
+.container {
+  text-align: center;
+  padding: 40px;
+  min-height: 100vh; /* Ensures content fills the viewport */
+  box-sizing: border-box; /* Prevents padding from breaking layout */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:  
+    radial-gradient(circle at 50% 0%, #ffffff 20%, transparent 60%),
+    linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+/* Glossy Floating Navbar */
+.navbar {
+  width: 90%;
+  max-width: 1200px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 15px 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-weight: bold;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  color: #fff;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #4CAF50, #45a049);  
+  /* box-shadow: 0 4px 12px rgba(0, 255, 0, 0.4);  */
+  transition: background 0.3s ease, transform 0.3s;
+}
+
+.navbar a:hover {
+  background: linear-gradient(135deg, #45a049, #4CAF50); 
+  transform: scale(1.1);
+  /* box-shadow: 0 5px 15px rgba(0, 255, 0, 0.6);  Stronger glow effect */
+}
+
+/* Content Styles */
+.container {
+  text-align: center;
+  padding: 40px;
+  /* padding-left: 300px; */
+}
+
+h2 {
+  color: #4CAF50;
+  margin-bottom: 30px;
+}
+
+/* Feature Box Improvements */
+.feature-box {
+  background: #ffffff;
+  border-radius: 25px;
+  padding: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 600px; /* Control size for uniformity */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  animation: fadeIn 1.5s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* margin-left: 120px; */
+}
+
+.feature-box:hover {
+  transform: translateY(-5px); /* Smooth lift effect */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.feature-box img {
+  width: 80px;  /* Increased image size */
+  height: 80px;
+  border-radius: 50%;
+  border: 4px solid #4CAF50; /* Clean border */
+}
+
+.feature-content {
+  flex: 1;  /* Ensures balanced alignment */
+  text-align: left;
+}
+
+.feature-content p {
+  color: #333; /* Darker text for readability */
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.feature-content button {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.feature-content button:hover {
+  background: #45a049;
+  transform: scale(1.08); /* Enhanced button effect */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Chatbot Button */
+.chatbot-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+
+
+
+
+
+.desp-box {
+  background: #ffffff;
+  border-radius: 25px;
+  padding: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  animation: fadeIn 1.5s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  left: 100px;
+  top: 270px;
+}
+
+.desp-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.desp-box img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid #4CAF50;
+}
+
+.desp-content {
+  width: 100%;
+}
+
+.desp-content p {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.desp-content button {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.desp-content button:hover {
+  background: #45a049;
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+.desp-box2 {
+  background: #ffffff;
+  border-radius: 25px;
+  padding: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  animation: fadeIn 1.5s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  left: 1350px;
+  top: 200px;
+}
+
+.desp-box2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Meme Image Styling */
+.desp-box2 img {
+  width: 100%;         
+  max-width: 350px;    /* Bigger display for better visual impact */
+  height: auto;
+  border-radius: 15px;
+  border: 4px solid #4CAF50;  /* Green border for positive vibes */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  object-fit: cover;  /* Ensures the meme scales properly */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add a subtle zoom effect on hover */
+.desp-box2 img:hover {
+  transform: scale(1.05);  
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Meme Content Styling */
+.desp-content2 {
+  width: 100%;
+}
+
+.desp-content2 h3 {
+  color: #4CAF50;  /* Positive green color */
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.desp-content2 p {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Button Styling */
+.desp-content2 button {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.desp-content2 button:hover {
+  background: #45a049;
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation for Smooth Appearance */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+.content {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+h2 {
+  font-size: 48px; /* Increased for stronger impact */
+  color: #4CAF50;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.features-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  gap: 50px;
+}
+
+.features-text {
+  text-align: left;
+  width: 50%;
+  font-size: 24px;  /* Increased for better readability */
+  color: #333;
+  line-height: 2;   /* Improved spacing for clean structure */
+}
+
+.features-text p {
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.features-text span {
+  color: #4CAF50;
+  font-weight: bold;
+  font-size: 28px;  /* Enlarged for emphasis */
+}
+
+.image {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.image img {
+  max-width: 100%;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  filter: drop-shadow(0 6px 15px rgba(0, 0, 0, 0.3));
+}
+
+.image img:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.4));
+}
+.emoji-tracker {
+  background: #ffffff;
+  border: 3px solid #4CAF50;
+  border-radius: 12px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input[type='range'] {
+  width: 80%;
+  margin: 10px 0;
+  accent-color: #4CAF50;
+}
+
+.emoji-display {
+  font-size: 4rem;
+  margin: 10px 0;
+}
+
+.recommendation-hub {
+  background-color: #ffffff;
+  border: 3px solid #2196F3;
+  border-radius: 12px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  /* width: 15000px; */
+  max-width: 1000px;
+  text-align: center;
+}
+
+#detailed-recommendations {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  gap: 20px;
+}
+
+.recommendation-section {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #2196F3;
+  border-radius: 8px;
+  background-color: #e3f2fd;
+}
+
+.recommendation-section h4 {
+  color: #0D47A1;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.recommendation-section p,
+.recommendation-section a {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #2196F3;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #0D47A1;
+}
+.recommendation-hub {
+  background-color: #f0f8ff;
+  padding: 40px;
+  border-radius: 20px;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;  /* Increased Width */
+}
+
+#detailed-recommendations p {
+  font-size: 22px; 
+  font-weight: bold;
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+
+.recommendation-grid {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.recommendation-section {
+  flex: 1;
+  background-color: #e6f7ff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  min-height: 200px;
+}
+
+.recommendation-section img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}

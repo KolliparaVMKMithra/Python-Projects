@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mano Mitra - Survey</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="survey.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-logo">Mano Mitra</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="survey.html">Survey</a></li>
+        <li><a href="#">Virtual Assistant</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h2>Mental Wellness Survey</h2>
+      <div id="survey-container"></div>
+
+      <div class="btn-group">
+        <button id="prevBtn" onclick="prevQuestion()">Previous</button>
+        <button id="nextBtn" onclick="nextQuestion()">Next</button>
+        <button id="submitBtn" onclick="submitSurvey()">Submit</button>
+      </div>
+
+      <div id="result-container" class="hidden">
+        <h3>Your Mental Health Score: <span id="score"></span>/100</h3>
+        <canvas id="mentalHealthGraph" width="400" height="200"></canvas>
+        <div id="recommendations"></div>
+      </div>
+    </div>
+
+    <script src="chart.js"></script>
+    <script src="survey.js"></script>
+  </body>
+</html>
